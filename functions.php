@@ -153,6 +153,9 @@ function yesterday_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/theme.js', [], time() , true );
+
 }
 add_action( 'wp_enqueue_scripts', 'yesterday_scripts' );
 
@@ -189,3 +192,23 @@ function yesterday_enqueue_style() {
 }
 add_action( 'wp_enqueue_scripts' , 'yesterday_enqueue_style' );
 
+/* Breadcrumbs Addition */
+function get_breadcrumb() {
+    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+    if (is_category() || is_single()) {
+        echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+        the_category(' &bull; ');
+            if (is_single()) {
+                echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+                the_title();
+            }
+    } elseif (is_page()) {
+        echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+        echo the_title();
+    } elseif (is_search()) {
+        echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+        echo '"<em>';
+        echo the_search_query();
+        echo '</em>"';
+    }
+}

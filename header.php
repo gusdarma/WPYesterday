@@ -24,7 +24,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'yesterday' ); ?></a>
-
+	<div id="divider" class="divider-sticky"></div>
 	<header id="masthead" class="site-header">
 		<div class="site-header-inner">
 			<div class="site-branding">
@@ -42,6 +42,18 @@
 					)
 				);
 				?>
+				<?php get_search_form(); ?> 
 			</nav><!-- #site-navigation -->
-		</div><!-- #site-header-inner -->
+		</div><!-- #site-header-inner -->			
 	</header><!-- #masthead -->
+	<!-- Page title section -->
+		<div id="page-title" class="page-title-section">
+			<div class="page-title-wrap">
+				<div class="page-title">
+					<?php the_title('<h1>', '</h1>'); ?>
+				</div>
+				<div class="breadcrumbs">
+					<?php get_breadcrumb('<p>', '</p>'); ?>
+				</div>
+			</div>
+		</div>
