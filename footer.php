@@ -12,19 +12,29 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'yesterday' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'yesterday' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'yesterday' ), 'yesterday', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="footer-wrap">
+			<div class="footer-inner left">
+				<div class="logo-footer">
+					<?php the_custom_logo();?>
+				</div>
+				<div class="site-info">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'yesterday' ) ); ?>">
+					<?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'Proudly powered by %s', 'yesterday' ), 'WordPress' );
+					?>
+				</a>
+				<span class="sep"> | </span>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Theme: %1$s by %2$s.', 'yesterday' ), 'yesterday', '<a href="https://www.linkedin.com/in/gusdarma/">gusdarma</a>' );
+					?>
+				</div><!-- .site-info -->
+			</div>
+			<div class="footer-inner right">
+				<p class="copy-right">© <?php echo date('Y'); ?> Yesterday Wordpress Theme. All rights reserved</p>
+			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

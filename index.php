@@ -21,9 +21,9 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
+				<!-- <header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				</header> -->
 				<?php
 			endif;
 
@@ -48,9 +48,8 @@ get_header();
 
 		endif;
 		?>
-
-	</main><!-- #main -->
+	<?php get_sidebar(); ?>
+	</main><!-- #main index.php -->
 
 <?php
-get_sidebar();
 get_footer();

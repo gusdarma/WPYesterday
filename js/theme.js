@@ -1,3 +1,4 @@
+/*Trigger sticky header*/
 console.log("loaded");
 var observer = new IntersectionObserver(
   function (entries) {

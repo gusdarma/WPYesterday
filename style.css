@@ -962,7 +962,7 @@ object {
   width: 80px;
 }
 .site-header-inner {
-  max-width: 1170px;
+  max-width: 1140px;
   display: flex;
   margin: auto;
   padding-top: 10px;
@@ -1019,7 +1019,7 @@ ul.sub-menu {
   border-radius: 4px;
 }
 .page-title-wrap {
-  max-width: 1170px;
+  max-width: 1140px;
   margin: auto;
   padding: 2.5rem 0rem;
 }
@@ -1061,7 +1061,7 @@ ul.sub-menu {
   border-radius: 4px !important;
   border: none !important;
   font-size: 14px;
-  padding: 6px 10px !important;
+  padding: 3px 8px !important;
 }
 .search-field:hover {
   border: none !important;
@@ -1071,13 +1071,96 @@ ul.sub-menu {
   padding-left: 8px;
 }
 .divider-sticky {
-  height: 10px;
+  height: 1px;
   background-color: #1565c0;
 }
 .header-sticky {
   box-shadow: 0px 10px 25px -13px #5e5e5e;
   position: sticky;
   top: 0px;
-  transition: 4s ease-out;
+  transition: 0.4s ease-out;
+}
+.site-header-inner {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.header-sticky .site-branding img {
+  width: 55px;
+  transition: 0.4s ease-out;
+}
+.site-branding img {
+  transition: 0.4s ease-out;
+}
+body.home.page {
+  margin-bottom: 0px;
 }
 /*header*/
+
+/*Footer*/
+footer .footer-wrap {
+  max-width: 1140px;
+  margin: auto;
+  padding: 2.5rem 0rem;
+  display: flex;
+}
+.footer-inner.left,
+.footer-inner.right {
+  width: 50%;
+}
+.footer-inner.left {
+  display: flex;
+}
+.footer-inner .site-info {
+  padding-left: 2rem;
+}
+.footer-inner.right p {
+  margin: 0 0;
+}
+.footer-inner.right .copy-right {
+  text-align: right;
+  font-size: 14px;
+  color: #dedede;
+}
+.site-footer {
+  background-color: #1565c0;
+}
+.site-info {
+  color: white;
+  font-size: 14px;
+}
+.site-info a {
+  color: white;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer a:hover {
+  color: #dedede;
+  transition: 0.3s ease-out;
+}
+.logo-footer img {
+  width: 50px;
+}
+/*Footer*/
+
+/*Body*/
+.site-main-inner {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+}
+.site-main-inner article {
+  width: 70%;
+  padding-right: 1.5rem;
+}
+.site-main-inner aside {
+  width: 30%;
+  padding-left: 1.5rem;
+}
+.site-main {
+  padding: 2rem 0px;
+}
+body {
+  margin-bottom: 0px !important;
+}
+/*Body*/
