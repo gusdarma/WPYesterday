@@ -33,7 +33,7 @@ function yesterday_custom_settings() {
     register_setting( 'yesterday-setting-group', 'handler_twitter', 'yesterday_sanitize_twitter');
     register_setting( 'yesterday-setting-group', 'handler_facebook' );
     register_setting( 'yesterday-setting-group', 'handler_instagram' );
-    register_setting( 'yesterday-setting-group', 'handler_medium' );
+    register_setting( 'yesterday-setting-group', 'handler_linkedIn' );
     register_setting( 'yesterday-setting-group', 'handler_youtube' );
 
     add_settings_section( 'yesterday-sidebar-options', 'Social Media', 'yesterday_sidebar_options', 'yesterday' );
@@ -42,10 +42,8 @@ function yesterday_custom_settings() {
     add_settings_field( 'sidebar-twitter', 'Twitter', 'yesterday_sidebar_twitter', 'yesterday', 'yesterday-sidebar-options' );
     add_settings_field( 'sidebar-facebook', 'Facebook', 'yesterday_sidebar_facebook', 'yesterday', 'yesterday-sidebar-options' );
     add_settings_field( 'sidebar-instagram', 'Instagram', 'yesterday_sidebar_instagram', 'yesterday', 'yesterday-sidebar-options' );
-    add_settings_field( 'sidebar-medium', 'Medium', 'yesterday_sidebar_medium', 'yesterday', 'yesterday-sidebar-options' );
+    add_settings_field( 'sidebar-linkedIn', 'LinkedIn', 'yesterday_sidebar_linkedIn', 'yesterday', 'yesterday-sidebar-options' );
     add_settings_field( 'sidebar-youtube', 'Youtube', 'yesterday_sidebar_youtube', 'yesterday', 'yesterday-sidebar-options' );
-
-
 
 }
 
@@ -70,7 +68,7 @@ function yesterday_sidebar_twitter() {
 
 function yesterday_sidebar_facebook() {
     $handler_facebook = esc_attr( get_option( 'handler_facebook' ) ) ;  
-    echo '<input type="text" name="handler_facebook" value="'.$handler_facebook.'" placeholder="Facebook" />' ;
+    echo '<input type="text" name="handler_facebook" value="'.$handler_facebook.'"/>' ;
 }
 
 function yesterday_sidebar_instagram() {
@@ -78,9 +76,9 @@ function yesterday_sidebar_instagram() {
     echo '<input type="text" name="handler_instagram" value="'.$handler_instagram.'" placeholder="Instagram" />' ;
 }
 
-function yesterday_sidebar_medium() {
-    $handler_medium = esc_attr( get_option( 'handler_medium' ) ) ;  
-    echo '<input type="text" name="handler_medium" value="'.$handler_medium.'" placeholder="Medium" />' ;
+function yesterday_sidebar_linkedIn() {
+    $handler_medium = esc_attr( get_option( 'handler_linkedIn' ) ) ;  
+    echo '<input type="text" name="handler_linkedIn" value="'.$handler_linkedIn.'" placeholder="LinkedIn" />' ;
 }
 
 function yesterday_sidebar_youtube() {
@@ -100,3 +98,4 @@ function yesterday_sanitize_twitter( $input ){
 function yesterday_theme_custom_css() {
     require_once( get_template_directory() . '/inc/templates/yesterday-custom-css.php' );
 }
+
